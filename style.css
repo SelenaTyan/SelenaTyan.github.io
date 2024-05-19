@@ -1,0 +1,55 @@
+:root{
+	--MainDark: #31304D;
+	--MainMid: #6c7492;
+	--MainLight: #B6BBC4;
+	--WarmPurple: #E178C5;
+	--WarmDark: #FF8E8F;
+	--WarmMid: #FFB38E;
+	--WarmLight: #FFFDCB
+}
+html{
+	font-family: system-ui;
+	color: white
+}
+body{
+	margin: 0px;
+	background: content-box linear-gradient(to bottom right, var(--WarmPurple),var(--WarmMid),var(--WarmLight))
+	}
+header{
+	background: var(--MainDark);
+	padding: 5px 2em;
+	border-bottom: 0.5rem solid var(--WarmLight)
+}
+a{
+	color: white;
+	style: bold;
+	background: color-mix(in srgb,var(--MainMid),var(--MainLight) 30%);
+	padding: 0.5em;
+	margin-right: 15px;
+	border-radius: 1em
+}
+main{
+	padding: 1em;
+	display: flex;
+	flex-flow: row wrap
+}
+div{flex: 200px}
+article{
+	background: var(--MainMid);
+	backdrop-filter: blur(10px);
+	border-radius: 16px;
+	padding: 1em;
+	margin: 0 17px 10px;
+	overflow: hidden;
+}
+section{
+	background: color-mix(in srgb,var(--MainMid),var(--MainLight) 30%);
+	border-radius: 8px;
+	padding: 0.5em
+}
+footer{
+	background: var(--MainDark);
+	color: #B6BBC4;
+	padding: 0 1em;
+	overflow: hidden
+}
