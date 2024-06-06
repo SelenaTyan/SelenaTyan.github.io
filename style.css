@@ -1,40 +1,40 @@
-:root{
+:root {
 	--MainDark: #31304D;
 	--MainMid: #6c7492;
 	--MainLight: #B6BBC4;
 	--WarmPurple: #E178C5;
 	--WarmDark: #FF8E8F;
 	--WarmMid: #FFB38E;
-	--WarmLight: #FFFDCB
+	--WarmLight: #FFFDCB;
+	--Golden: #fcea60
 }
-html{
+html {
 	font-family: system-ui;
 	color: white
 }
-body{
+body {
 	margin: 0px;
-	background: content-box linear-gradient(to bottom right, var(--WarmPurple),var(--WarmMid),var(--WarmLight))
+	background: content-box linear-gradient(to bottom right, var(--WarmPurple),var(--WarmLight),var(--Golden))
 	}
-header{
+header {
 	background: var(--MainDark);
 	padding: 5px 2em;
 	border-bottom: 0.5rem solid var(--WarmLight)
 }
-a{
-	color: white;
-	style: bold;
-	background: color-mix(in srgb,var(--MainMid),var(--MainLight) 30%);
-	padding: 0.5em;
-	margin-right: 15px;
-	border-radius: 1em
+h1{
+	text-shadow: 1px 1px 1px var(--WarmPurple), 2px 2px 1px var(--WarmPurple);
 }
-main{
+a{
+	color: #B6BBC4;
+	style: bold
+}
+main {
 	padding: 1em;
 	display: flex;
 	flex-flow: row wrap
 }
-div{flex: 200px}
-article{
+div	{ flex: 200px }
+article {
 	background: var(--MainMid);
 	backdrop-filter: blur(10px);
 	border-radius: 16px;
@@ -42,14 +42,76 @@ article{
 	margin: 0 17px 10px;
 	overflow: hidden;
 }
-section{
+section {
 	background: color-mix(in srgb,var(--MainMid),var(--MainLight) 30%);
 	border-radius: 8px;
 	padding: 0.5em
 }
-footer{
+footer {
 	background: var(--MainDark);
 	color: #B6BBC4;
 	padding: 0 1em;
-	overflow: hidden
+	overflow: hidden;
 }
+nav {
+	border: 5px;
+	background-color: var(--MainMid);
+	border-radius: 16px;
+}
+nav a {
+	color: white;
+	text-decoration: none
+}
+
+li { display: inline-block; }
+/*Add a color to the entire menu*/
+/*ul {   background-color: var(--MainMid); border-radius: 16px}
+/*Force the list to expand to contain the  links, add some padding around each link, and apply a link text color*/
+li a { display: block;   padding: 10px }
+/*Cause the links to change color when hovered on*/
+li a:hover { background-color: var(--Golden); } 
+
+
+/*TEXT BELOW IS JUST TAKEN, REVISIT IT PLEASE*/
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
